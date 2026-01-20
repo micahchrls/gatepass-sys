@@ -6,18 +6,29 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gatepass extends Model
 {
-    protected $fillable = [
-        'gatepass_number',
-        'school_year_id',
-        'vehicle_id',
-        'applicant_person_id',
-        'status',
-        'approved_by',
-        'approved_at',
-        'valid_from',
-        'valid_until',
-        'remarks',
-    ];
+   protected $fillable = [
+    'school_year_id',
+    'vehicle_id',
+    'applicant_person_id',
+
+    'type',
+
+    'sequence_no',
+    'gatepass_number',
+
+    'status',
+
+    'approved_by',
+    'approved_at',
+
+    'issued_by',
+    'issued_at',
+
+    'valid_from',
+    'valid_until',
+
+    'remarks',
+];
 
     protected $casts = [
         'approved_at' => 'datetime',
