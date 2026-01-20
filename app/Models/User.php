@@ -46,6 +46,11 @@ class User extends Authenticatable
         ];
     }
 
+    public function person()
+    {
+        return $this->hasOne(Person::class);
+    }
+
     public function approvedGatepasses()
     {
         return $this->hasMany(Gatepass::class, 'approved_by');

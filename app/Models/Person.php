@@ -22,6 +22,11 @@ class Person extends Model
         'user_id' => 'integer',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     public function vehicles()
     {
         return $this->belongsToMany(Vehicle::class, 'vehicle_people')
